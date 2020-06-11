@@ -12,14 +12,14 @@ Instructions on how to run the xAgent in Kubernetes.
 
 # Files
 
-* [Kubernetes.zip](Kubernetes.zip) - Workflow zip file with the step and example flow
-* [kubernetes.png](/kubernetes.png) - Kubernetes logo
-
-# How it works
-This step accesses the API through the xMatters Agent which will live in a pod inside your Kubernetes cluster.
-
+* [/files](/files) - Files for creating and deploying the xAgent container.
 
 # Installation
+
+## Docker Setup
+
+1. Run `docker build -t <CONTAINER_REGISTRY_LOCATION>:latest .` in [/files](/files) to create a docker image
+2. Run `docker push <CONTAINER_REGISTRY_LOCATION>` to push the container up to the container registry
 
 ## Kubernetes Setup
 
