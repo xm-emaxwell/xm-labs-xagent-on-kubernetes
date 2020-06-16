@@ -29,7 +29,7 @@ Instructions on how to run the xAgent in Kubernetes.
     3. On line 35, change the friendly name value. This is what your agent's name will be in xMatters.
 2. Modify the [/files/kube/xagent.secrets.yaml](/files/kube/xagent.secrets.yaml) file
     1. Find your API Key and Secret in xMatters. These values can be found in the xMatters installation instructions `Workflows > Agents` in your xMatters instance.
-    2. Base64 encode these values. A simple way to do this is to run:
+    2. Base64 decode these values. A simple way to do this is to run:
         1. `echo -n "VALUE" | base64 -d` in bash on linux
         2. `echo -n "VALUE" | base64 -D` on macOS
     3. Put those values in the [/files/kube/xagent.secrets.yaml](/files/kube/xagent.secrets.yaml) file.
