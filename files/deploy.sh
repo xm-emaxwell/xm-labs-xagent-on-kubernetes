@@ -17,7 +17,7 @@ xmatters_api_key=$(cat agent.config | jq -r ".xmatters_api_key")
 encoded_xmatters_api_key=$(echo -n $xmatters_api_key | base64)
 yq eval '.data.OWNER_API_KEY = "'$encoded_xmatters_api_key'"' -i kube/xagent.secrets.yaml
 
-#kubectl apply -f kube/role.yaml
-#kubectl create -f kube/xagent.secrets.yaml
-#kubectl create -f kube/xagent.deploy.yaml
+kubectl apply -f kube/role.yaml
+kubectl create -f kube/xagent.secrets.yaml
+kubectl create -f kube/xagent.deploy.yaml
 
