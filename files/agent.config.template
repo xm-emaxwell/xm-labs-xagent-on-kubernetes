@@ -1,0 +1,7 @@
+{
+    "xmatters_host_url":"example.xmatters.com",
+    "xagent_container_registry":"<container registry>",
+    "xagent_friendly_name":"agent friendly name",
+    "xmatters_key":"<xMatters agent XMATTERS_KEY>",
+    "xmatters_api_key":"<xMatters agent API_KEY>"
+}
