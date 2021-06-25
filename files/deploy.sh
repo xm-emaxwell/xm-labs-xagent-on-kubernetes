@@ -1,7 +1,7 @@
 #!/bin/bash
 
-wget https://github.com/mikefarah/yq/releases/download/v4.9.6/yq_linux_amd64 -O /usr/bin/yq &&\
-    chmod +x /usr/bin/yq
+sudo wget https://github.com/mikefarah/yq/releases/download/v4.9.6/yq_linux_amd64 -O /usr/bin/yq &&\
+    sudo chmod +x /usr/bin/yq
 
 registry=$(cat agent.config | jq -r ".xagent_container_registry")
 yq eval '.spec.template.spec.containers[0].image = "'$registry'"' -i kube/xagent.deploy.yaml
