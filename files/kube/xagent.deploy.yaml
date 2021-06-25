@@ -17,22 +17,22 @@ spec:
       serviceAccountName: xmatters
       containers:
         - name: xagent
-          image: <image_location>
+          image: <Container Registry>
           env:
-          - name: WEBSOCKET_HOST
-            value: "instance.xmatters.com"
-          - name: WEBSOCKET_SECRET
-            valueFrom:
-              secretKeyRef:
-                name: xagent-keys
-                key: WEBSOCKET_SECRET
-          - name: OWNER_API_KEY
-            valueFrom:
-              secretKeyRef:
-                name: xagent-keys
-                key: OWNER_API_KEY
-          - name: FRIENDLY_NAME
-            value: "kube101"
+            - name: WEBSOCKET_HOST
+              value: "<xMatters Host URL>"
+            - name: WEBSOCKET_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: xagent-keys
+                  key: WEBSOCKET_SECRET
+            - name: OWNER_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: xagent-keys
+                  key: OWNER_API_KEY
+            - name: FRIENDLY_NAME
+              value: "kube-pod"
           resources:
             limits:
               cpu: 500m

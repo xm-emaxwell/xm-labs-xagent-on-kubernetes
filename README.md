@@ -35,7 +35,7 @@ Instructions on how to run the xAgent in Kubernetes.
     3. Put those values in the [/files/kube/xagent.secrets.yaml](/files/kube/xagent.secrets.yaml) file.
 3. Modify the xmatters service account file
     1. The [/files/role.yaml](/files/role.yaml) file contains a sample list of permissions. Change these as needed for which permissions you need the xAgent to have.
-4. run `kubectl apply -f files/role.yaml` to create the xmatters service account.
+4. run `kubectl apply -f files/kube/role.yaml` to create the xmatters service account.
 5. run `kubectl create -f files/kube/xagent.secrets.yaml` to put the secrets into Kubernetes.
 6. run `kubectl create -f files/kube/xagent.deploy.yaml` to create the deployment.
 
